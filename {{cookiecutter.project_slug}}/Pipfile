@@ -7,7 +7,7 @@ name = "pypi"
 django = "*"
 cookiecutter = "*"
 django-vite = "*"
-environ = "*"
+django-environ = "*"
 
 [dev-packages]
 
