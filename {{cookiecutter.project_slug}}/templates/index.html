@@ -1,4 +1,4 @@
-{% load django_vite static %}
+{%% load django_vite static %%}
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    {% vite_hmr_client %}
+    {%% vite_hmr_client %%}
     {# path of your vite assets are relative to the frontend directory #}
-    {% vite_asset 'src/index.js' %}
+    {%% vite_asset 'src/index.js' %%}
 </head>
 <body>
     <h1>Welcome on my website</h1>

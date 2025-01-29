@@ -7,10 +7,5 @@
     "use_wagtail": false,
     "__prompts__": {
         "use_wagtail": "Voulez-vous utiliser wagtail ?"
-    },
-    "_copy_without_render": [
-        "frontend/README.md",
-        "{{cookiecutter.project_slug}}/templates",
-        "{{cookiecutter.project_slug}}/templates/**"
-    ]
+    }
 }

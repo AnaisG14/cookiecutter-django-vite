@@ -1,4 +1,4 @@
-{% load django_vite static wagtailcore_tags wagtailuserbar %}
+{%% load django_vite static wagtailcore_tags wagtailuserbar %%}
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -23,8 +23,8 @@
         <base target="_blank">
         {% endif %}
 
-        {% vite_hmr_client %}
-        {% vite_asset 'src/index.js' %}
+        {%% vite_hmr_client %%}
+        {%% vite_asset 'src/index.js' %%}
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
