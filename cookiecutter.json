@@ -11,6 +11,7 @@
     "_copy_without_render": [
         "frontend/README.md",
         "templates/index.html",
-        "templates/config/base.html"
+        "templates/config/**",
+        "templates/home/**"
     ]
 }
