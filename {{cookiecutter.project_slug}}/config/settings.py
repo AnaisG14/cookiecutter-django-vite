@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_vite',
-{% if cookiecutter.use_wagtail == 'y' %}
+{% if cookiecutter.use_wagtail %}
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -69,7 +69,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-{% if cookiecutter.use_wagtail == 'y' %}
+{% if cookiecutter.use_wagtail %}
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 {% endif %}
 ]
@@ -168,7 +168,7 @@ DJANGO_VITE = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-{% if cookiecutter.use_wagtail == 'y' %}
+{% if cookiecutter.use_wagtail %}
 WAGTAIL_SITE_NAME = "{{cookiecutter.project_name}}"
 WAGTAILADMIN_BASE_URL = 'http://example.com'
 WAGTAILDOCS_EXTENSIONS = ['csv', 'docx', 'key', 'odt', 'pdf', 'pptx', 'rtf', 'txt', 'xlsx', 'zip']
