@@ -10,6 +10,7 @@
     },
     "_copy_without_render": [
         "frontend/README.md",
-        "{{cookiecutter.project_slug}}/templates/**"
+        "templates/index.html",
+        "templates/config/base.html"
     ]
 }
