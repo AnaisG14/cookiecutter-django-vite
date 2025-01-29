@@ -10,6 +10,7 @@
     },
     "_copy_without_render": [
         "frontend/README.md",
-        "home/templates/index.html"
+        "templates/index.html",
+        "templates/config/home.html"
     ]
 }
