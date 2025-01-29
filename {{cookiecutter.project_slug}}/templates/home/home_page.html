@@ -1,4 +1,7 @@
 {% extends "../config/base.html" %}
 
-<h1>Bienvenue sur votre nouveau site</h1>
+{% block content %}
+<h1>{{ page.title }}</h1>
+{{ page.body | richtext }}
+{% endblock %}
 
