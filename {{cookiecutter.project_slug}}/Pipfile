@@ -5,9 +5,9 @@ name = "pypi"
 
 [packages]
 django = "*"
-cookiecutter = "*"
 django-vite = "*"
 django-environ = "*"
+wagtail = "*"
 
 [dev-packages]
 

@@ -4,6 +4,10 @@
     "description": "Behold My Awesome Project!",
     "author_name": "Anais Gatard",
     "version": "0.1.0",
+    "use_wagtail": false,
+    "__prompts__": {
+        "use_wagtail": "Voulez-vous utiliser wagtail ?"
+    },
     "_copy_without_render": [
         "frontend/README.md",
         "home/templates/index.html"

@@ -39,9 +39,26 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_vite',
+{% if cookiecutter.use_wagtail == 'y' %}
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail',
+
+    'modelcluster',
+    'taggit',
+{% endif %}
     'home',
     'authentication',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,6 +68,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+{% if cookiecutter.use_wagtail == 'y' %}
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+{% endif %}
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -131,6 +152,10 @@ STATICFILES_DIRS = [
     # BASE_DIR / "frontend" / "public"
 ]
 
+MEDIA_ROOT = BASE_DIR / "media"
+
+MEDIA_URL = "/media/"
+
 DJANGO_VITE = {
     "default": {
         "dev_mode": DEBUG,
@@ -141,3 +166,10 @@ DJANGO_VITE = {
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+{% if cookiecutter.use_wagtail == 'y' %}
+WAGTAIL_SITE_NAME = "{{cookiecutter.project_name}}"
+WAGTAILADMIN_BASE_URL = 'http://example.com'
+WAGTAILDOCS_EXTENSIONS = ['csv', 'docx', 'key', 'odt', 'pdf', 'pptx', 'rtf', 'txt', 'xlsx', 'zip']
+{% endif %}

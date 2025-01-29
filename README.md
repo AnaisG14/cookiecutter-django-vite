@@ -16,8 +16,12 @@ Placer vous dans le dossier créé puis activer l'environnement virtuel
     $ pipenv install
     $ pipenv shell
 
+### Ajouter les variables d'environnement dans le fichier .env
+DEBUG=True
+SECRET_KEY=SecretKey
+ALLOWED_HOSTS=127.0.0.1,localhost
+
 ### Faire les migrations django
-    $ python manage.py makemigrations
     $ python manage.py migrate
 
 ### Préparer les dépendances frontend
