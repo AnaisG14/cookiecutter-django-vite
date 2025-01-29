@@ -79,7 +79,9 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -170,6 +172,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 {% if cookiecutter.use_wagtail %}
 WAGTAIL_SITE_NAME = "{{cookiecutter.project_name}}"
-WAGTAILADMIN_BASE_URL = 'http://example.com'
+WAGTAILADMIN_BASE_URL = 'http://127.0.0.1'
 WAGTAILDOCS_EXTENSIONS = ['csv', 'docx', 'key', 'odt', 'pdf', 'pptx', 'rtf', 'txt', 'xlsx', 'zip']
 {% endif %}

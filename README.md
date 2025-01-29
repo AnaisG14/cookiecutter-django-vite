@@ -8,22 +8,35 @@ création d'un site django avec Vite et Bootstrap. Possibilité d'ajouter wagtai
     $ cookiecutter gh:AnaisG14/cookiecutter-django-vite
 Des questions seront posées et votre projet sera créé.
 
-### Préparer l'environnement virtuel
-Placer vous dans le dossier créé puis activer l'environnement virtuel
-
+### Se placer dans le dossier créé
     $ cd projectName
+
+### Créer le fichier .env et y ajouter les variables d'environnement
+DEBUG=True
+
+SECRET_KEY=SecretKey
+
+ALLOWED_HOSTS=127.0.0.1,localhost
+
+### Préparer l'environnement virtuel
+
     $ mkdir .venv
     $ pipenv install
     $ pipenv shell
 
-### Ajouter les variables d'environnement dans le fichier .env
-DEBUG=True
-SECRET_KEY=SecretKey
-ALLOWED_HOSTS=127.0.0.1,localhost
-
-### Faire les migrations django
+### Faire les migrations django et créer un superuser
     $ python manage.py migrate
+    $ python manage.py createsuperuser
 
 ### Préparer les dépendances frontend
-    Lire le README.md du dossier frontend
+Se placer dans le dossier frontend
+
+    $ cd frontend
+    $ npm install
+
+### Tester en local
+#### Lancer le serveur front depuis le dossier frontend
+    $ npm run start
+#### Lancer l'application django depuis le dossier de l'application
+    $ python manage.py runserver
 

@@ -1,2 +1,6 @@
 @import "./base/variables.scss";
 @import "./base/bootstrap.scss";
+
+h1 {
+    color: $primary;
+}
