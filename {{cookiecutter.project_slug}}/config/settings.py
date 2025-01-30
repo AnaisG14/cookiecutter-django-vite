@@ -50,8 +50,8 @@ INSTALLED_APPS = [
     'wagtail.images',
     'wagtail.search',
     'wagtail.admin',
+    "wagtail.contrib.settings",
     'wagtail',
-
     'modelcluster',
     'taggit',
 {% endif %}
@@ -68,7 +68,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
 {% if cookiecutter.use_wagtail %}
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 {% endif %}
